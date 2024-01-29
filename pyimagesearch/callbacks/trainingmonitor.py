@@ -41,7 +41,7 @@ class TrainingMonitor(BaseLogger):
         # to file
         if self.jsonPath is not None:
             f = open(self.jsonPath, "w")
-            f.write(json.dumps(self.H))
+            f.write(json.dumps(str(self.H)))
             f.close()
         # (epoch starts at zero)
         if len(self.H["loss"]) > 1:
